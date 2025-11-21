@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil VLSM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="container mt-5">
+    <h1 class="mb-4 text-center">Hasil VLSM</h1>
+    <div class="card p-4 shadow">
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Network</th>
+                    <th>Range</th>
+                    <th>Broadcast</th>
+                    <th>Subnet Mask</th>
+                    <th>Slash</th>
+                    <th>Wildcard</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in result %}
+                <tr>
+                    <td>{{ row.Name }}</td>
+                    <td>{{ row.Network }}</td>
+                    <td>{{ row.Range }}</td>
+                    <td>{{ row.Broadcast }}</td>
+                    <td>{{ row['Subnet Mask'] }}</td>
+                    <td>{{ row.Slash }}</td>
+                    <td>{{ row.Wildcard }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-between mt-4">
+            <a href="/download" class="btn btn-success">Download Excel</a>
+            <a href="/" class="btn btn-secondary">Kembali</a>
+        </div>
+    </div>
+</body>
+</html>
