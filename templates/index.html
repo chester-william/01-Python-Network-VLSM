@@ -9,20 +9,21 @@
 </head>
 <body class="container mt-5">
     <h1 class="mb-4 text-center">VLSM Calculator</h1>
+    <h5 class="mb-4 text-center">by: Chester William</h5>
     <div class="card p-4 shadow">
         <form id="vlsmForm" method="POST">
             <div class="mb-3">
-                <label class="form-label">Masukan jumlah Network:</label>
+                <label class="form-label">Enter the number of Networks:</label>
                 <input type="number" name="num_networks" id="num_networks" class="form-control" min="1" required>
             </div>
             <div class="mb-3">
-                <label class="form-label">Masukan IP pertamanya:</label>
+                <label class="form-label">Enter the first IP:</label>
                 <input type="text" name="initial_ip" id="initial_ip" class="form-control" placeholder="e.g., 192.168.1.1" required>
-                <div class="invalid-feedback">Masukkan IP valid (contoh: 192.168.1.1)</div>
+                <div class="invalid-feedback">Enter a valid IP (example: 192.168.1.1)</div>
             </div>
             <div id="network-fields"></div>
             <div class="d-flex justify-content-between mt-4">
-                <button type="submit" class="btn btn-primary">Hitung VLSM</button>
+                <button type="submit" class="btn btn-primary">Calculate VLSM</button>
                 <button type="button" id="resetBtn" class="btn btn-danger">Reset Form</button>
             </div>
         </form>
@@ -50,11 +51,11 @@
                 container.innerHTML += `
                     <h5 class="mt-3">Network ${i+1}</h5>
                     <div class="mb-3">
-                        <label>Nama Network:</label>
+                        <label>Network Name:</label>
                         <input type="text" name="name_${i}" class="form-control" required>
                     </div>
                     <div class="mb-3">
-                        <label>Alokasi IP (termasuk Network ID dan Broadcast):</label>
+                        <label>IP Allocation (including Network ID and Broadcast):</label>
                         <input type="number" name="hosts_${i}" class="form-control" min="2" required>
                     </div>
                 `;
