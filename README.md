@@ -33,7 +33,7 @@ vlsm_app/
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/username/vlsm_app.git
+git clone https://github.com/chester-william/01-Python-Network-VLSM.git
 cd vlsm_app
 ```
 
@@ -67,7 +67,7 @@ git init
 git add .
 git commit -m "Initial commit"
 git branch -M main
-git remote add origin https://github.com/username/vlsm_app.git
+git remote add origin https://github.com/chester-william/01-Python-Network-VLSM.git
 git push -u origin main
 ```
 
